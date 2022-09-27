@@ -1,11 +1,22 @@
 import { NavLink } from 'react-router-dom';
 
 export const Navbar = () => {
+  const navLinkStyle = ({ isActive }) => {
+    return {
+      fontWeight: isActive ? 'bold' : 'normal',
+      color: isActive ? '#0284c7' : '#fff',
+    };
+  };
+
   return (
-    <nav>
-      <ul style={{ display: 'flex', gap: '12px', margin: 0, padding: 0 }}>
-        <NavLink to='/'>Home</NavLink>
-        <NavLink to='/about'>About</NavLink>
+    <nav className='min-h-[70px] flex items-center'>
+      <ul className='flex gap-3 text-xl'>
+        <NavLink style={navLinkStyle} to='/'>
+          Home
+        </NavLink>
+        <NavLink style={navLinkStyle} to='/about'>
+          About
+        </NavLink>
       </ul>
     </nav>
   );
