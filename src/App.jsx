@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { Navbar } from './components';
-import { About, Home, Layout } from './pages';
+import { About, Home, OrderSummary, Layout } from './pages';
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
+        <Route path='order-summary' element={<OrderSummary />} />
       </Routes>
     </Layout>
   );
