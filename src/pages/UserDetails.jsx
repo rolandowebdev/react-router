@@ -1,3 +1,6 @@
+import { useParams } from 'react-router-dom';
+
 export const UserDetails = () => {
-  return <h1 className='mt-2 text-xl'>Detail about user</h1>;
+  const { userId } = useParams();
+  return <h1 className='mt-2 text-xl'>Detail about user {userId}</h1>;
 };
