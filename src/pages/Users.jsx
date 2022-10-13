@@ -9,7 +9,7 @@ export const Users = () => {
       <h2>User 2</h2>
       <h3>User 3</h3>
       <Outlet />
-      <div className='flex gap-4 mt-4 text-slate-800 text-sm'>
+      <div className='flex gap-4 my-4 text-slate-800 text-sm'>
         <button
           onClick={() => serSearchParams({ filter: 'active' })}
           className='bg-slate-400 px-4 rounded-sm py-2'>
